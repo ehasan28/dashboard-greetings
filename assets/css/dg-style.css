@@ -1,0 +1,26 @@
+.dg-widget-wrapper {
+    display: grid;
+    gap: 6px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #f7f8ff, #f2f6ff);
+    transition: background 300ms ease;
+}
+
+.dg-icon {
+    font-size: 20px;
+}
+
+.dg-quote {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+
+.dg-author {
+    margin: 0;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 600;
+}
