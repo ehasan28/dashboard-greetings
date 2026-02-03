@@ -11,7 +11,6 @@
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       dashboard-greetings
- * Domain Path:       /languages
  *
  * This program is free software; you can redistribute it and/or modify it under the terms of the GNU
  * General Public License as published by the Free Software Foundation; either version 2 of the License,
@@ -27,12 +26,6 @@ define( 'DG_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
 // Load PHP functionality
 require_once DG_PLUGIN_PATH . 'inc/dg-widget-main.php';
-
-// Load translations.
-function dg_load_textdomain() {
-    load_plugin_textdomain( 'dashboard-greetings', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
-}
-add_action( 'plugins_loaded', 'dg_load_textdomain' );
 
 // Enqueue admin assets (optional, only if you use them)
 function dg_admin_assets( $hook ) {
