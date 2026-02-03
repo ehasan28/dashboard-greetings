@@ -148,17 +148,35 @@ function dg_render_motivation_content() {
         'Love all, trust a few, do wrong to none. – William Shakespeare',
     ];
 
+    $icons = [
+        '💡',
+        '🌟',
+        '✨',
+        '🔥',
+        '🌈',
+        '🌞',
+        '🍀',
+        '🚀',
+        '🎯',
+        '🧠',
+        '🪄',
+        '🫶',
+    ];
+
     $random_quote = $quotes[ array_rand( $quotes ) ];
+    $random_icon = $icons[ array_rand( $icons ) ];
     $parts = array_map( 'trim', explode( '–', $random_quote, 2 ) );
     $quote_text = $parts[0] ?? '';
     $quote_author = $parts[1] ?? '';
     ?>
     <div class="dg-widget-wrapper">
-        <span class="dg-icon">💡</span>
-        <p class="dg-quote">"<?php echo esc_html( $quote_text ); ?>"</p>
-        <?php if ( $quote_author ) : ?>
-            <p class="dg-author">— <?php echo esc_html( $quote_author ); ?></p>
-        <?php endif; ?>
+        <div class="dg-quote-glass">
+            <span class="dg-icon"><?php echo esc_html( $random_icon ); ?></span>
+            <p class="dg-quote">"<?php echo esc_html( $quote_text ); ?>"</p>
+            <?php if ( $quote_author ) : ?>
+                <p class="dg-author">— <?php echo esc_html( $quote_author ); ?></p>
+            <?php endif; ?>
+        </div>
     </div>
     <?php
 }

@@ -29,11 +29,18 @@
     }
 
     function applyGradient() {
-        var widget = document.querySelector('.dg-widget-wrapper');
-        if (!widget) {
+        var widgetInside = document.querySelector('#dg_motivation_widget .inside');
+        var widgetHeader = document.querySelector('#dg_motivation_widget .postbox-header');
+        if (!widgetInside && !widgetHeader) {
             return;
         }
-        widget.style.background = pickRandom(gradients);
+        var gradient = pickRandom(gradients);
+        if (widgetInside) {
+            widgetInside.style.background = gradient;
+        }
+        if (widgetHeader) {
+            widgetHeader.style.background = gradient;
+        }
     }
 
     if (document.readyState === 'loading') {
