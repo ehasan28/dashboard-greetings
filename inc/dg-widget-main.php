@@ -45,7 +45,7 @@ add_action( 'wp_dashboard_setup', 'dg_prioritize_motivation_widget', 100 );
  * Render the widget content.
  */
 function dg_render_motivation_content() {
-                        $quotes = [
+    $quotes = [
         'Life is about making an impact, not making an income. – Kevin Kruse',
         'Whatever the mind of man can conceive and believe, it can achieve. – Napoleon Hill',
         'Strive not to be a success, but rather to be of value. – Albert Einstein',
