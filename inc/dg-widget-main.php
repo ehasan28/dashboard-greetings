@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 function dg_register_motivation_widget() {
     wp_add_dashboard_widget(
         'dg_motivation_widget',         // Widget slug.
-        'Daily Motivation',             // Widget title.
+        __( 'Daily Motivation', 'dashboard-greetings' ), // Widget title.
         'dg_render_motivation_content', // Display callback.
         null,
         null,

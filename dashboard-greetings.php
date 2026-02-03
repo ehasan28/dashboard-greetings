@@ -28,6 +28,12 @@ define( 'DG_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 // Load PHP functionality
 require_once DG_PLUGIN_PATH . 'inc/dg-widget-main.php';
 
+// Load translations.
+function dg_load_textdomain() {
+    load_plugin_textdomain( 'dashboard-greetings', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+}
+add_action( 'plugins_loaded', 'dg_load_textdomain' );
+
 // Enqueue admin assets (optional, only if you use them)
 function dg_admin_assets( $hook ) {
     // Only load on Dashboard
