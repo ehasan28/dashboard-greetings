@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name:       Dashboard Greetings
- * Plugin URI:        https://wordpress.org/plugins/dashboard-greetings
- * Description:       A lightweight plugin that provides the WordPress admin bar with random, motivational phrases to brighten your workflow.
+ * Plugin URI:        https://github.com/ehasan28/dashboard-greetings/
+ * Description:       A lightweight plugin that adds a Daily Motivation widget to the WordPress dashboard with random quotes and subtle styling.
  * Version:           1.0.0
  * Requires at least: 6.0
  * Requires PHP:      7.4
@@ -42,13 +42,6 @@ function dg_admin_assets( $hook ) {
         '1.0.0'
     );
 
-    wp_enqueue_style(
-        'dg-admin-fonts',
-        'https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Bricolage+Grotesque:wght@600&display=swap',
-        [],
-        null
-    );
-
     wp_enqueue_script(
         'dg-admin-script',
         DG_PLUGIN_URL . 'assets/js/dg-script.js',
@@ -58,3 +51,5 @@ function dg_admin_assets( $hook ) {
     );
 }
 add_action( 'admin_enqueue_scripts', 'dg_admin_assets' );
+
+?>

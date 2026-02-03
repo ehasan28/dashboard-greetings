@@ -13,14 +13,15 @@
 
 .dg-quote {
     margin: 0;
-    font-size: 14px;
+    font-size: 20px;
     line-height: 1.4;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-weight: 400;
 }
 
 .dg-author {
     margin: 0;
-    font-family: "Bricolage Grotesque", sans-serif;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-weight: 600;
+    font-size: 14px;
 }
